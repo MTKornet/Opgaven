@@ -7,12 +7,12 @@ def standaardprijs(afstandKM):
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
     if leeftijd <12 or leeftijd >=65:
-        if 'za' in weekendrit or 'zo' in weekendrit:
+        if 'z' in weekendrit:
             prijs2=afstandKM*0.65
         else:
             prijs2=afstandKM*0.70
     else:
-        if 'za' in weekendrit or 'zo' in weekendrit:
+        if 'z' in weekendrit:
             prijs2=afstandKM*0.60
         else:
             prijs2=afstandKM
