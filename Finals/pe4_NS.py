@@ -1,4 +1,5 @@
 def standaardprijs(afstandKM):
+    'Berekent standaardprijs uit afstand in Km'
     if afstandKM >50:
         prijs1=(afstandKM-50)*0.60+15
     else:
@@ -6,16 +7,18 @@ def standaardprijs(afstandKM):
     return prijs1
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
+    'Berekent kortingsprijs met de leeftijd, dag van de week en afstand in Km'
+    maxprijs=standaardprijs(afstandKM)
     if leeftijd <12 or leeftijd >=65:
         if 'z' in weekendrit:
-            prijs2=afstandKM*0.65
+            prijs2=maxprijs*0.65
         else:
-            prijs2=afstandKM*0.70
+            prijs2=maxprijs*0.70
     else:
         if 'z' in weekendrit:
-            prijs2=afstandKM*0.60
+            prijs2=maxprijs*0.60
         else:
-            prijs2=afstandKM
+            prijs2=maxprijs
     return prijs2
 
 AfstandKM = eval(input('Lengte treinrijs in KM?'))
@@ -25,4 +28,4 @@ Dag=input('Welke dag is het?')
 Leeftijd=eval(input('Wat is uw leeftijd'))
 
 print(standaardprijs(AfstandKM))
-print(ritprijs(Leeftijd,Dag,standaardprijs(AfstandKM)))
+print(ritprijs(Leeftijd,Dag,AfstandKM))
