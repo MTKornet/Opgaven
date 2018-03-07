@@ -1,10 +1,12 @@
 def toon_aantal_kluizen_vrij(tekst):
+    'Bereken aantal vrije kluizen'
     Kluizen=open(tekst,'r')
     Regels=Kluizen.readlines()
     Kluizen.close()
     return 12-len(Regels)
 
 def nieuwe_kluis(tekst):
+    'Nieuwe kluis aanvragen'
     Lijst=['1','2','3','4','5','6','7','8','9','10','11','12']
     Kluizen=open(tekst,'r')
     Regels=Kluizen.readlines()
@@ -37,6 +39,7 @@ def nieuwe_kluis(tekst):
         NBestand.close
 
 def kluis_openen(tekst):
+    'Kluis openen via wachtwoord'
     Lijst=[]
     Kluizen=open(tekst,'r')
     Regels=Kluizen.readlines()
@@ -53,6 +56,7 @@ def kluis_openen(tekst):
         print('Uw kluisnummer of wachtwoord is onjuist!')
 
 def kluis_teruggeven(tekst):
+    'Kluis verwijderen via wachtwoord'
     Lijst=[]
     Kluizen = open(tekst, 'r')
     Regels = Kluizen.readlines()
@@ -79,6 +83,7 @@ def kluis_teruggeven(tekst):
 
 'Scherm uitvoering'
 def Start(Menu):
+    'Uitvoering keuzemenu'
     if Menu == 1:
         print(toon_aantal_kluizen_vrij('kluizen'))
     elif Menu == 2:
