@@ -92,7 +92,7 @@ def Start(Menu):
         print(kluis_openen('kluizen'))
     elif Menu == 4:
         print(kluis_teruggeven('kluizen'))
-    elif Menu == 5:
+    else:
         return False
 
 Menu=int(input("1: Ik wil weten hoeveel kluizen nog vrij zijn\n2: Ik wil een nieuwe kluis\n3: Ik wil even iets uit mijn kluis halen\n4: Ik geef mijn kluis terug\n5: Ik wil stoppen\n"))
