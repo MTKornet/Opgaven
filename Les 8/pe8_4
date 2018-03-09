@@ -1,0 +1,5 @@
+            Geordend    Muteerbaar  Iterable    Dubbelle waarden toegestaan
+Tuple       JA          NEE         JA          JA
+Dictionary  NEE         JA          JA          NEE
+Set         NEE         JA          NEE         NEE
+List        JA          JA          JA          JA
