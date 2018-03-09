@@ -1,10 +1,13 @@
 def wachtwoord(string):
-    if len(string)<4 or len(string)>4:
-        print('{} heeft {} letters'.format(string,len(string)))
+    if len(string)!=4:
+        return False
+    else:
+        return True
 
-Woord=input('Geef een string van vier letters:')
-while not wachtwoord(Woord):
+while True:
     Woord = input('Geef een string van vier letters:')
-    if len(Woord) ==4:
+    if wachtwoord(Woord):
         print('Inlezen van correcte string: {} is geslaagd'.format(Woord))
-    break
+        break
+    else:
+        print('{} heeft {} letters'.format(Woord,len(Woord)))
