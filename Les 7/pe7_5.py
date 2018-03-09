@@ -13,9 +13,9 @@ def namen():
             Aantal[naam]=1
 
     for item in Aantal:
-        if Aantal.get(item)==1:
-            print('Er is {} student met de naam {}'.format(Aantal.get(item),item))
+        if Aantal[item]==1:
+            print('Er is {} student met de naam {}'.format(Aantal[item],item))
         else:
-            print('Er zijn {} studenten met de naam {}'.format(Aantal.get(item),item))
+            print('Er zijn {} studenten met de naam {}'.format(Aantal[item],item))
 
 print(namen())

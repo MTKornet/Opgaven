@@ -15,6 +15,6 @@ Company=input('Enter Company name: ')
 print('Ticker symbol: {}'.format(Lijst[Company]))
 Ticker=input('Enter Ticker symbol: ')
 for sleutel in Lijst:
-    if Lijst.get(sleutel)==Ticker:
+    if Lijst[sleutel]==Ticker:
         print('Company name: {}'.format(sleutel))
 
