@@ -1,4 +1,5 @@
 def inlezen_beginstation(stations):
+    'Opvragen beginstation'
     begin = input('Wat is uw begin station?')
     while begin not in stations:
         begin=input('Wat is uw begin station?')
@@ -7,6 +8,7 @@ def inlezen_beginstation(stations):
             return stationsnaam
 
 def inlezen_eindstation(stations,beginstation):
+    'Opvragen eindstation'
     Index_Begin=stations.index(beginstation)
     eind = input('Wat is uw eind station?')
     while eind not in stations[Index_Begin:]:
@@ -17,6 +19,7 @@ def inlezen_eindstation(stations,beginstation):
             return stationsnaam
 
 def omroepen_reis(stations,beginstation,eindstation):
+    'Printen van omroepen'
     Index_Begin=stations.index(beginstation)
     Index_Eind = stations.index(eindstation)
     Aantal_Stations=Index_Eind-Index_Begin
@@ -27,7 +30,7 @@ def omroepen_reis(stations,beginstation,eindstation):
     print('De prijs van het kaartje is {} euro.'.format(Prijs))
     print('Jij stapt in de trein in: {}'.format(beginstation))
     for tussenstations in stations[Index_Begin+1:Index_Eind]:
-        print(tussenstations, sep=' - ')
+        print(' - {}'.format(tussenstations))
     print('Jij stapt uit in: {}'.format(eindstation))
 
 stations=['Schagen','Heerhugowaard','Alkmaar','Castricum','Zaandam','Amsterdam Sloterdijk','Amsterdam Centraal',
