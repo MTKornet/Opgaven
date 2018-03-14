@@ -3,9 +3,7 @@ def inlezen_beginstation(stations):
     begin = input('Wat is uw begin station?')
     while begin not in stations:
         begin=input('Wat is uw begin station?')
-    for stationsnaam in stations:
-        if stationsnaam==begin:
-            return stationsnaam
+    return begin
 
 def inlezen_eindstation(stations,beginstation):
     'Opvragen eindstation'
@@ -14,9 +12,7 @@ def inlezen_eindstation(stations,beginstation):
     while eind not in stations[Index_Begin:]:
         print('Deze trein komt niet in {}'.format(eind))
         eind = input('Wat is uw eind station?')
-    for stationsnaam in stations:
-        if stationsnaam==eind:
-            return stationsnaam
+    return eind
 
 def omroepen_reis(stations,beginstation,eindstation):
     'Printen van omroepen'
