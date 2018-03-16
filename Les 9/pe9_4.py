@@ -2,7 +2,7 @@ import csv
 
 def inlezen(file):
     maximum = 0
-    minimum = 1000000000000000
+    minimum = -1
     aantal = 0
     with open(file,'r') as myCSVFile:
         reader=csv.DictReader(myCSVFile,delimiter=';')
@@ -14,7 +14,7 @@ def inlezen(file):
             if Prijs>maximum:
                 maximum=Prijs
                 max='Het duurste artikel is {} en die kost {} Euro'.format(Rij['Naam'],Rij['Prijs'])
-            elif Voorraad<minimum:
+            if Voorraad<minimum or minimum==-1:
                 minimum=Voorraad
                 min='Er zijn slechts {} exemplaren in voorraad van het product met nummer {}'.format(Rij['Voorraad'],Rij['Artikelnummer'])
 
