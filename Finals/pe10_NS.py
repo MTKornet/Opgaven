@@ -1,5 +1,6 @@
 import xmltodict
 def openXML(bestand):
+    'Inlezen XML bestand'
     with open(bestand) as myXMLFile:
         Inhoud=myXMLFile.read()
         Dict=xmltodict.parse(Inhoud)
